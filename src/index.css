@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #02040b;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #f5fbff;
+  background:
+    radial-gradient(circle at 10% 48%, rgba(255, 188, 86, 0.24), transparent 26%),
+    radial-gradient(circle at 76% 20%, rgba(87, 176, 255, 0.12), transparent 28%),
+    linear-gradient(135deg, #01030a 0%, #07101b 46%, #02040b 100%);
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+}
+
+.stars span {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(166, 222, 255, 0.85);
+}
+
+.sunBloom {
+  position: absolute;
+  left: -16%;
+  top: 19%;
+  width: 620px;
+  height: 620px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 201, 92, 0.55), rgba(255, 151, 46, 0.16) 36%, transparent 68%);
+  filter: blur(10px);
+  mix-blend-mode: screen;
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 210, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 36px, 42px 100%;
+  mask-image: radial-gradient(circle at 50% 50%, black, transparent 78%);
+}
+
+.topHud {
+  position: absolute;
+  left: 82px;
+  right: 82px;
+  top: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(232, 248, 255, 0.86);
+  font-size: 18px;
+}
+
+.brand {
+  letter-spacing: 0;
+  font-weight: 750;
+}
+
+.status {
+  padding: 10px 18px;
+  border: 1px solid rgba(151, 219, 255, 0.24);
+  border-radius: 6px;
+  background: rgba(8, 22, 34, 0.36);
+  backdrop-filter: blur(18px);
+  color: rgba(203, 234, 255, 0.72);
+}
+
+.cardWrap {
+  position: absolute;
+  top: 238px;
+  right: 92px;
+  width: 448px;
+  min-height: 386px;
+  padding: 34px;
+  border: 1px solid rgba(169, 224, 255, 0.28);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(246, 252, 255, 0.16), rgba(74, 129, 178, 0.06)),
+    rgba(7, 14, 24, 0.48);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(26px);
+}
+
+.kicker {
+  color: rgba(128, 221, 255, 0.78);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.planetCn {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 760;
+}
+
+.planetEn {
+  margin-top: 7px;
+  color: rgba(236, 248, 255, 0.62);
+  font-size: 25px;
+}
+
+.pulse {
+  width: 58px;
+  height: 58px;
+  border: 2px solid;
+  border-radius: 999px;
+  box-shadow: 0 0 28px currentColor;
+}
+
+.facts {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+  color: rgba(247, 252, 255, 0.92);
+  font-size: 22px;
+}
+
+.facts div {
+  padding: 14px 16px;
+  border: 1px solid rgba(173, 228, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.cardWrap p {
+  margin: 24px 0 0;
+  color: rgba(223, 242, 255, 0.74);
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.bottomHud {
+  position: absolute;
+  left: 82px;
+  bottom: 58px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 660px;
+  color: rgba(229, 246, 255, 0.76);
+  font-size: 18px;
+}
+
+.track {
+  width: 430px;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.track div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #ffc15b, #65dcff);
+  box-shadow: 0 0 18px rgba(113, 222, 255, 0.74);
+}
+
+.intro {
+  position: absolute;
+  left: 82px;
+  top: 385px;
+  width: 720px;
+  pointer-events: none;
+}
+
+.intro div {
+  font-size: 82px;
+  line-height: 1.02;
+  font-weight: 800;
+  text-shadow: 0 0 42px rgba(126, 219, 255, 0.34);
+}
+
+.intro span {
+  display: block;
+  margin-top: 20px;
+  color: rgba(226, 244, 255, 0.72);
+  font-size: 28px;
+}
